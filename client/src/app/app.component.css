@@ -1,0 +1,9 @@
+#image{
+    height:auto; 
+    background-size:cover;
+    width: auto;
+    background-image:url('images/trls.jpg');
+    background-position:50% 50%;
+    background-size: cover;
+  }
+

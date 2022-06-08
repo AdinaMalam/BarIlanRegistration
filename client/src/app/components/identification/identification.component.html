@@ -1,0 +1,11 @@
+<div id="image" class = "container" dir="rtl" >
+  <form class="example-form">
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>סמל מוסד</mat-label>
+        <input id="institution_symbol" matInput #institutionSymbol>
+      </mat-form-field>
+      <button mat-raised-button (click)="checkInstitutionSymbol(institutionSymbol.value)">כניסה</button>
+      <br/>
+      <h2 class="p">{{msg}}</h2>
+  </form>
+</div>
