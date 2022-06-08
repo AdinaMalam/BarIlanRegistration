@@ -55,7 +55,10 @@
       <mat-error>אימות סיסמה אינו זהה לסיסמה</mat-error>
     </mat-form-field>
     <br />
-      <button mat-stroked-button type="submit" [disabled]="!userModelForm.valid">שמור</button>
+    <div matTooltip="הטופס אינו תקין, נא למלאות שדות חובה" [matTooltipDisabled]="userModelForm.valid">
+      <button mat-stroked-button type="submit" [disabled]="!userModelForm.valid">שמור
+      </button>
+    </div>
   </div>
   </form>
 </div>

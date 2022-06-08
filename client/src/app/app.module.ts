@@ -17,6 +17,7 @@ import {EqualValidator} from './password-validation.directive';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatDialogModule,
     MatSelectModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    MatTooltipModule
   ],
   exports:[MatInputModule, RouterModule],
   providers: [HttpService,MatSnackBar],
