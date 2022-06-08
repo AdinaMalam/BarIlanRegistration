@@ -2,9 +2,14 @@
   <form class="example-form">
       <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>סמל מוסד</mat-label>
-        <input id="institution_symbol" matInput #institutionSymbol>
+        <input id="institution_symbol"  matInput #institutionSymbol>
+        <mat-error>שדה חובה</mat-error>
       </mat-form-field>
-      <button mat-raised-button (click)="checkInstitutionSymbol(institutionSymbol.value)">כניסה</button>
+      <button mat-stroked-button (click)="checkInstitutionSymbol(institutionSymbol.value)">כניסה</button>
+      <!-- <div matTooltip="יש להכניס סמל מוסד" [matTooltipDisabled]="form.valid">
+        <button mat-stroked-button (click)="checkInstitutionSymbol(institutionSymbol.value)" [disabled]="!form.valid">שמור
+        </button>
+      </div> -->
       <br/>
       <h2 class="p">{{msg}}</h2>
   </form>
