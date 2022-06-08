@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpService } from '../../http.service';
+import { LoginModel } from 'src/app/models/login-model';
+
+
 
 @Component({
   selector: 'app-identification',
@@ -10,7 +14,10 @@ import { HttpService } from '../../http.service';
 export class IdentificationComponent implements OnInit {
 
   constructor(private httpService:HttpService, private router:Router) { }
-
+  form:FormGroup = new FormGroup({});
+  loginModel = new LoginModel("");
+  
+  
   ngOnInit(): void {
   }
 
