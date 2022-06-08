@@ -1,15 +1,13 @@
 <div id="image" class = "container" dir="rtl" >
-  <form class="example-form">
+  <form class="example-form" form #loginModelForm="ngForm">
       <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>סמל מוסד</mat-label>
-        <input id="institution_symbol"  matInput #institutionSymbol>
-        <mat-error>שדה חובה</mat-error>
+        <input id="institution_symbol" matInput #institutionSymbol name="institutionSymbol" [(ngModel)]="loginModel.symbol"  required>
       </mat-form-field>
-      <button mat-stroked-button (click)="checkInstitutionSymbol(institutionSymbol.value)">כניסה</button>
-      <!-- <div matTooltip="יש להכניס סמל מוסד" [matTooltipDisabled]="form.valid">
-        <button mat-stroked-button (click)="checkInstitutionSymbol(institutionSymbol.value)" [disabled]="!form.valid">שמור
+      <div matTooltip="יש להזין סמל מוסד" [matTooltipDisabled]="loginModelForm.valid">
+        <button mat-stroked-button  [disabled]="!loginModelForm.valid" (click)="checkInstitutionSymbol(institutionSymbol.value)">כניסה
         </button>
-      </div> -->
+      </div>
       <br/>
       <h2 class="p">{{msg}}</h2>
   </form>
