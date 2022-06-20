@@ -30,13 +30,13 @@
     <mat-form-field appearance="outline" class="multyply" [style.width.rem]=15>
       <mat-label>אימייל</mat-label>
       <input matInput placeholder="אימייל"  name="email" type="email" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" [(ngModel)]="userModel.email" required>
-      <mat-error>שדה חובה</mat-error>
+      <mat-error> מייל לא תקין - שדה חובה</mat-error>
     </mat-form-field>
     <br/>
     <mat-form-field class="multyply" appearance="outline" [style.width.rem]=15>
       <mat-label>טלפון נייד</mat-label>
       <input matInput placeholder="טלפון נייד" name="phone" [(ngModel)]="userModel.phone" pattern="^((\\+91-?)|0)?[0-9]{10}$"  required>
-      <mat-error>שדה חובה</mat-error>
+      <mat-error>מספר לא תקין - שדה חובה</mat-error>
     </mat-form-field>
     <mat-form-field class="multyply" appearance="outline" [style.width.rem]=15>
       <mat-label>טלפון בבית הספר</mat-label>
