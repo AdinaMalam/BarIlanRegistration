@@ -2,54 +2,55 @@
 <!-- <div [style.background-image]="'url(../../images/trls.jpg)'"></div> -->
 <div id="image" class = "container" >
  <div *ngIf="flagSuccess && flagFail" >
+  <br/>
   <h1 class="p"> <strong> אוניברסיטת בר אילן - רישום</strong></h1>
   <h2 class="p"><strong>שלום לבית הספר {{schoolName}}</strong></h2>
 
   <form  form #userModelForm="ngForm" (ngSubmit)="addNewUser()">
-  <div dir="rtl">
-    <mat-form-field appearance="outline" class="multyply">
+  <div dir="rtl" style="font-size: 1.1rem;">
+    <mat-form-field appearance="outline" class="multyply" [style.width.rem]=15>
       <mat-label>שם פרטי</mat-label>
       <input matInput placeholder="שם פרטי" name="firstName" [(ngModel)]="userModel.firstName"  required>
       <mat-error>שדה חובה</mat-error>
     </mat-form-field>
 
-    <mat-form-field appearance="outline" class="multyply">
+    <mat-form-field appearance="outline" class="multyply" [style.width.rem]=15>
       <mat-label>שם משפחה</mat-label>
       <input matInput placeholder="שם משפחה"  name="lastName"  [(ngModel)]="userModel.lastName" required>
       <mat-error>שדה חובה</mat-error>
     </mat-form-field>
     <br />
-    <mat-form-field appearance="fill" class="multyply">
+    <mat-form-field appearance="fill" class="multyply" [style.width.rem]=15>
       <mat-label>תפקיד</mat-label>
       <mat-select name="roles" [(ngModel)]="userModel.role" required>
         <mat-option *ngFor="let role of roles" [value]="role">{{role}}</mat-option>
       </mat-select>
       <mat-error>שדה חובה</mat-error>
     </mat-form-field>
-    <mat-form-field appearance="outline" class="multyply">
+    <mat-form-field appearance="outline" class="multyply" [style.width.rem]=15>
       <mat-label>אימייל</mat-label>
       <input matInput placeholder="אימייל"  name="email" type="email" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" [(ngModel)]="userModel.email" required>
       <mat-error>שדה חובה</mat-error>
     </mat-form-field>
     <br/>
-    <mat-form-field class="multyply" appearance="outline">
+    <mat-form-field class="multyply" appearance="outline" [style.width.rem]=15>
       <mat-label>טלפון נייד</mat-label>
       <input matInput placeholder="טלפון נייד" name="phone" [(ngModel)]="userModel.phone" pattern="^((\\+91-?)|0)?[0-9]{10}$"  required>
       <mat-error>שדה חובה</mat-error>
     </mat-form-field>
-    <mat-form-field class="multyply" appearance="outline">
+    <mat-form-field class="multyply" appearance="outline" [style.width.rem]=15>
       <mat-label>טלפון בבית הספר</mat-label>
       <input matInput placeholder="טלפון בבית הספר"  name="phoneAtSchool" pattern="^((\\+91-?)|0)?[0-9]{9}$"  [(ngModel)]="userModel.phoneAtSchool">
     </mat-form-field>
     <br/>
 
-    <mat-form-field class="multyply" appearance="outline">
+    <mat-form-field class="multyply" appearance="outline" [style.width.rem]=15>
       <mat-label>סיסמה</mat-label>
       <input matInput placeholder="סיסמה" type="password" name="password" minlength="4" #password="ngModel" [(ngModel)]="userModel.password" validateEqual="confirmPassword" reverse="true">
       <mat-error>הסיסמה חייבת להכיל לפחות 4 תווים</mat-error>
     </mat-form-field>
 
-    <mat-form-field class="multyply" appearance="outline">
+    <mat-form-field class="multyply" appearance="outline" [style.width.rem]=15>
       <mat-label>אימות סיסמה</mat-label>
       <input matInput placeholder="אימות סיסמא" type="password" name="confirmPassword" #confirmPassword="ngModel" [(ngModel)]="userModel.confirmPassword" validateEqual="password">
       <mat-error>אימות סיסמה אינו זהה לסיסמה</mat-error>
