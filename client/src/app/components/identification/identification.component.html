@@ -1,5 +1,7 @@
 <div id="image" class = "container" dir="rtl" >
-  <form class="example-form" form #loginModelForm="ngForm">
+  <br/><br/><br/><br/><br/><br/>
+  <form class="example-form" form #loginModelForm="ngForm" autocomplete="off">
+      <h2 class="p"><strong>הכנס סמל מוסד</strong></h2>
       <mat-form-field class="example-full-width" appearance="outline">
         <mat-label>סמל מוסד</mat-label>
         <input id="institution_symbol" matInput #institutionSymbol name="institutionSymbol" [(ngModel)]="loginModel.symbol"  required>
