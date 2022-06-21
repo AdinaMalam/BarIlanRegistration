@@ -13,21 +13,24 @@
   padding: 40px;
   text-align: center;
 }
+.p{
+  color: gray;
+}
 #image{
   height:100%; 
   background-size:cover;
   width:auto;
-  background-image:url('../../images/trls.jpg');
+  background-image:url('../../images/picture.png');
   background-position:50% 50%;
-  vertical-align: bottom;
+  padding-bottom: 30rem;
 }
 .p{
   color: gray;
 }
-::ng-deep .mat-form-field-flex > .mat-form-field-infix { padding: 1.2em 28px !important;}
+/* ::ng-deep .mat-form-field-flex > .mat-form-field-infix { padding: 1.2em 28px !important;}
 ::ng-deep .mat-form-field-label-wrapper { top: -1.5em; }
 
 ::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
     transform: translateY(-1.1em) scale(.75);
     width: 133.33333%;
-}
+} */
