@@ -10,15 +10,13 @@ import { UserModel } from './models/user-model';
 export class HttpService {
 
   constructor(private http:HttpClient) { }
-
-  readonly baseURL = 'https://localhost:7193/Users/'
+  readonly baseURL = window.location.hostname ===  'localhost' ? 'https://localhost:7193/' : 'http://updatews.biu-edulab.org.il/';
   getInstitution(symbol:string): Observable<Institution>{
-    return this.http.get<Institution>(this.baseURL + "GetSymbol/" + symbol)
+    return this.http.get<Institution>(this.baseURL + "Users/GetSymbol/" + symbol)
   }
   
   addUser(user:UserModel):Observable<any>{
-  console.log("fghj");
-  return this.http.post<any>(this.baseURL + 'AddUser', user,{observe: 'response'})
+  return this.http.post<any>(this.baseURL + 'Users/AddUser', user,{observe: 'response'})
 }
 
 }
