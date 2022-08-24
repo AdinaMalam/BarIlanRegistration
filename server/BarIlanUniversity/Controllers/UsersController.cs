@@ -65,11 +65,18 @@ namespace BarIlanUniversity.Controllers
         {
             var context = new BarIlanBiologyRegistrationContext();
             var symbol = context.Tinstitutions.Where(x => x.NvSchoolSymbol == schoolSymbol).FirstOrDefault();
-            if(symbol == null)
+            if (symbol == null)
             {
                 return null;
             }
             return symbol;
+        }
+
+        [HttpGet("GetSymbol2/{schoolSymbol}")]
+        public async Task<string> GetSymbol2(string schoolSymbol)
+        {
+
+            return schoolSymbol;
         }
     }
 }
